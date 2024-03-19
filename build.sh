@@ -5,3 +5,5 @@ export GOOS=linux
 for exe in detect build; do
   go build -ldflags="-s -w" -o ./bin/${exe} ./cmd/${exe}/main.go
 done
+
+tar czf package/cnb-example.tar.gz bin
